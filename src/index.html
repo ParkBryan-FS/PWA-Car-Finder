@@ -6,9 +6,18 @@
     <title>New ES6/SCSS Project</title>
   </head>
   <body>
-    <h1><strong>Find Your Dream Vehicle</strong></h1>
-    <h3>Have you been dreaming about getting a new vehicle?</h3>
-    <h3>Well, you're in luck.</h3>
-    <script src="bundle.js"></script>
+    <form id="filterForm">
+      <select id="yearSelect">
+        <option value="">Vehicle Year</option>
+      </select>
+      <select id="makeSelect" disabled>
+        <option value="">Vehicle Make</option>
+      </select>
+      <select id="modelSelect" disabled>
+        <option value="">Vehicle Model</option>
+      </select>
+    </form>
+
+    <script src="bundle.js" type="module"></script>
   </body>
 </html>
