@@ -1,21 +1,86 @@
-html {
-  background: grey;
-  height: auto;
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+* {
+  font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
 }
 
-html > body {
-  height: auto;
-  width: 100%;
+$primaryHeaderColor: #ffffff;
+$subtextColor: #d3d3d3;
+$formPanelBgColor: #f2f2f2;
+$formBlue: #348fbc;
+$formDisabledColor: #909090;
+$selectedOptionColor: #212121;
+
+html,
+body {
+  height: 100%;
   margin: 0;
   padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url("../img/car-finder-bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
-  background-color: #000; // fallback color
+  background-color: grey;
 }
 
-// body {
+#appContainer {
+  text-align: left;
+  padding: 2rem;
 
-// }
+  h1 {
+    color: $primaryHeaderColor;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  h3 {
+    color: $subtextColor;
+    font-weight: 400;
+    margin-bottom: 2rem;
+  }
+}
+
+#filterForm {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.dropdown-card {
+  background-color: $formPanelBgColor;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgb(0, 0, 0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+select {
+  width: 200px;
+  padding: 0.75rem;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: white;
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
+  cursor: pointer;
+  // transition: all 0.2s ease-in-out;
+
+  &:hover {
+    box-shadow: 0 6px 15px rgb(0, 0, 0);
+  }
+
+  &:disabled {
+    background-color: $formDisabledColor;
+    color: #aaa;
+  }
+}

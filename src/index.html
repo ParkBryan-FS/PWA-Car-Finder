@@ -3,20 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
     <title>New ES6/SCSS Project</title>
   </head>
+
   <body>
-    <form id="filterForm">
-      <select id="yearSelect">
-        <option value="">Vehicle Year</option>
-      </select>
-      <select id="makeSelect" disabled>
-        <option value="">Vehicle Make</option>
-      </select>
-      <select id="modelSelect" disabled>
-        <option value="">Vehicle Model</option>
-      </select>
-    </form>
+    <body>
+      <div id="appContainer">
+        <h1>Ready for your next sweet ride?</h1>
+        <h3>Let's find your next favorite..</h3>
+        <form id="filterForm">
+          <div class="dropdown-card">
+            <select id="yearSelect">
+              <option value="">Select Year</option>
+            </select>
+          </div>
+          <div class="dropdown-card">
+            <select id="makeSelect" disabled>
+              <option value="">Select Make</option>
+            </select>
+          </div>
+          <div class="dropdown-card">
+            <select id="modelSelect" disabled>
+              <option value="">Select Model</option>
+            </select>
+          </div>
+        </form>
+      </div>
+    </body>
 
     <script src="bundle.js" type="module"></script>
   </body>
